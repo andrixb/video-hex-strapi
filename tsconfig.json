@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "types": ["cypress"]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "Contexts/MainApp/infrastructure/ui/views/home/components/footer/components/log.style,tsx"],
+  "exclude": [
+    "node_modules",
+    "build",
+        "scripts",
+        "acceptance-tests",
+        "src/Shared/infrastructure/setupTests.ts"
+  ]
+}

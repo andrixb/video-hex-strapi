@@ -1,0 +1,1022 @@
+{
+    "dogecoin": {
+        "idString": "dogecoin",
+        "name": "Dogecoin",
+        "seedPhrase": "",
+        "symbol": "DOG",
+        "visible": true,
+        "communityStatus": "published",
+        "themeColor": {
+            "hex": "#BA9F33"
+        },
+        "category": [
+            {
+                "id": "49451634",
+                "name": "Cryptocurrencies",
+                "emoji": "💰"
+            }
+        ]
+    },
+    "crypto": {
+        "idString": "crypto",
+        "name": "Crypto",
+        "seedPhrase": "#crypto",
+        "symbol": "CRP",
+        "visible": true,
+        "communityStatus": "published",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "nft": {
+        "idString": "nft",
+        "name": "NFT",
+        "seedPhrase": "#nft",
+        "symbol": "NFT",
+        "visible": true,
+        "communityStatus": "published",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": [
+            {
+                "id": "49451634",
+                "name": "Cryptocurrencies",
+                "emoji": "💰"
+            }
+        ]
+    },
+    "tesla": {
+        "idString": "tesla",
+        "name": "Tesla",
+        "seedPhrase": "#tesla",
+        "symbol": "TSL",
+        "visible": true,
+        "communityStatus": "published",
+        "themeColor": {
+            "hex": "#CC0000"
+        },
+        "category": [
+            {
+                "id": "49489748",
+                "name": "Automotive",
+                "emoji": "🏎"
+            }
+        ]
+    },
+    "polkadot": {
+        "idString": "polkadot",
+        "name": "Polkadot",
+        "seedPhrase": "",
+        "symbol": "DOT",
+        "visible": true,
+        "communityStatus": "published",
+        "themeColor": {
+            "hex": "#E6007A"
+        },
+        "category": [
+            {
+                "id": "49451634",
+                "name": "Cryptocurrencies",
+                "emoji": "💰"
+            }
+        ]
+    },
+    "python": {
+        "idString": "python",
+        "name": "Python",
+        "seedPhrase": "#python",
+        "symbol": "PYT",
+        "visible": true,
+        "communityStatus": "published",
+        "themeColor": {
+            "hex": "#5A9FD4"
+        },
+        "category": [
+            {
+                "id": "53037643",
+                "name": "Programming",
+                "emoji": ""
+            }
+        ]
+    },
+    "poker": {
+        "idString": "poker",
+        "name": "Poker",
+        "seedPhrase": "#Poker, #WSOP",
+        "symbol": "PKR",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "shopify": {
+        "idString": "shopify",
+        "name": "Shopify",
+        "seedPhrase": "Shopify, @Shopify",
+        "symbol": "SPF",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#95BF46"
+        },
+        "category": []
+    },
+    "yc": {
+        "idString": "yc",
+        "name": "YC",
+        "seedPhrase": "#ycombinator",
+        "symbol": "YCO",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#FB651E"
+        },
+        "category": [
+            {
+                "id": "53037855",
+                "name": "Venture Capital",
+                "emoji": ""
+            }
+        ]
+    },
+    "react": {
+        "idString": "react",
+        "name": "React",
+        "seedPhrase": "",
+        "symbol": "REA",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#61DAFB"
+        },
+        "category": [
+            {
+                "id": "53037643",
+                "name": "Programming",
+                "emoji": ""
+            }
+        ]
+    },
+    "bored-ape-yacht-club-bayc": {
+        "idString": "bored-ape-yacht-club-bayc",
+        "name": "Bored Ape Yacht Club (BAYC)",
+        "seedPhrase": "#bayc #boredapeyachtclub",
+        "symbol": "BAC",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "crypto-punks": {
+        "idString": "crypto-punks",
+        "name": "Crypto Punks",
+        "seedPhrase": "#cryptopunks",
+        "symbol": "CRP",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "cool-cats": {
+        "idString": "cool-cats",
+        "name": "Cool Cats",
+        "seedPhrase": "#coolcats",
+        "symbol": "COC",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "lazy-lions": {
+        "idString": "lazy-lions",
+        "name": "Lazy Lions",
+        "seedPhrase": "#lazylions",
+        "symbol": "LZL",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "axie-infinity": {
+        "idString": "axie-infinity",
+        "name": "Axie Infinity",
+        "seedPhrase": "#axieinfinity",
+        "symbol": "AXI",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "world-of-women": {
+        "idString": "world-of-women",
+        "name": "World of Women",
+        "seedPhrase": "#worldofwomen",
+        "symbol": "WOW",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "pudgy-penguins": {
+        "idString": "pudgy-penguins",
+        "name": "Pudgy Penguins",
+        "seedPhrase": "#pudgypenguins",
+        "symbol": "PDG",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "psychedelics": {
+        "idString": "psychedelics",
+        "name": "Psychedelics",
+        "seedPhrase": "#psychedelics",
+        "symbol": "PSY",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "monero": {
+        "idString": "monero",
+        "name": "Monero",
+        "seedPhrase": "#monero",
+        "symbol": "XMR",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": [
+            {
+                "id": "49451634",
+                "name": "Cryptocurrencies",
+                "emoji": "💰"
+            }
+        ]
+    },
+    "nba": {
+        "idString": "nba",
+        "name": "NBA",
+        "seedPhrase": "#nba",
+        "symbol": "NBA",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "longevity": {
+        "idString": "longevity",
+        "name": "Longevity",
+        "seedPhrase": "#longevity",
+        "symbol": "LGV",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "fintwit": {
+        "idString": "fintwit",
+        "name": "FinTwit",
+        "seedPhrase": "#fintwit",
+        "symbol": "FTW",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "star-trek": {
+        "idString": "star-trek",
+        "name": "Star Trek",
+        "seedPhrase": "#startrek",
+        "symbol": "STR",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "star-wars": {
+        "idString": "star-wars",
+        "name": "Star Wars",
+        "seedPhrase": "",
+        "symbol": "STW",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "genomics": {
+        "idString": "genomics",
+        "name": "Genomics",
+        "seedPhrase": "#genomics",
+        "symbol": "GNO",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "build-in-public": {
+        "idString": "build-in-public",
+        "name": "Build in Public",
+        "seedPhrase": "#buildinpublic",
+        "symbol": "BIP",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "sneakerheads": {
+        "idString": "sneakerheads",
+        "name": "Sneakerheads",
+        "seedPhrase": "#sneakerheads",
+        "symbol": "SNK",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "makers": {
+        "idString": "makers",
+        "name": "Makers",
+        "seedPhrase": "#makers",
+        "symbol": "MKR",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "league-of-legends": {
+        "idString": "league-of-legends",
+        "name": "League of Legends",
+        "seedPhrase": "#leagueoflegends",
+        "symbol": "LOL",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "smart-city": {
+        "idString": "smart-city",
+        "name": "Smart City",
+        "seedPhrase": "#smartcity",
+        "symbol": "SCT",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "nhl": {
+        "idString": "nhl",
+        "name": "NHL",
+        "seedPhrase": "#nhl",
+        "symbol": "nhl",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "nfl": {
+        "idString": "nfl",
+        "name": "NFL",
+        "seedPhrase": "#nfl",
+        "symbol": "NFL",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "zcash": {
+        "idString": "zcash",
+        "name": "ZCash",
+        "seedPhrase": "#zcash",
+        "symbol": "ZCH",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "net": {
+        "idString": "net",
+        "name": ".NET",
+        "seedPhrase": "#dotnet",
+        "symbol": "NET",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "avalanche": {
+        "idString": "avalanche",
+        "name": "Avalanche",
+        "seedPhrase": "#avalanche",
+        "symbol": "AVC",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "pokemon": {
+        "idString": "pokemon",
+        "name": "Pokemon",
+        "seedPhrase": "#pokemon",
+        "symbol": "PKM",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "xbox": {
+        "idString": "xbox",
+        "name": "XBox",
+        "seedPhrase": "#xbox",
+        "symbol": "XBX",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "playstation": {
+        "idString": "playstation",
+        "name": "Playstation",
+        "seedPhrase": "#playstation",
+        "symbol": "PST",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "nintendo": {
+        "idString": "nintendo",
+        "name": "Nintendo",
+        "seedPhrase": "#nintendo",
+        "symbol": "NTD",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "logtech": {
+        "idString": "logtech",
+        "name": "LogTech",
+        "seedPhrase": "#logtech",
+        "symbol": "LOT",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "foodtech": {
+        "idString": "foodtech",
+        "name": "FoodTech",
+        "seedPhrase": "#foodtech",
+        "symbol": "FOT",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "medtech": {
+        "idString": "medtech",
+        "name": "MedTech",
+        "seedPhrase": "#MedTech",
+        "symbol": "MET",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "fintech": {
+        "idString": "fintech",
+        "name": "FinTech",
+        "seedPhrase": "#fintech",
+        "symbol": "FIT",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "web3": {
+        "idString": "web3",
+        "name": "Web3",
+        "seedPhrase": "#web3",
+        "symbol": "WB3",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "productivity": {
+        "idString": "productivity",
+        "name": "Productivity",
+        "seedPhrase": "#productivity",
+        "symbol": "PRD",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "defi": {
+        "idString": "defi",
+        "name": "DeFi",
+        "seedPhrase": "#defi",
+        "symbol": "DEF",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "blockchain": {
+        "idString": "blockchain",
+        "name": "Blockchain",
+        "seedPhrase": "#blockchain",
+        "symbol": "BCK",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "data-visualization": {
+        "idString": "data-visualization",
+        "name": "Data Visualization",
+        "seedPhrase": "#datavisualization ",
+        "symbol": "DTV",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "ux": {
+        "idString": "ux",
+        "name": "UX",
+        "seedPhrase": "#UX #user-experience",
+        "symbol": "UEX",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "lightning-network": {
+        "idString": "lightning-network",
+        "name": "Lightning Network",
+        "seedPhrase": "#lightningnetwork",
+        "symbol": "LTN",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "litecoin": {
+        "idString": "litecoin",
+        "name": "Litecoin",
+        "seedPhrase": "#litecoin",
+        "symbol": "LTC",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": [
+            {
+                "id": "49451634",
+                "name": "Cryptocurrencies",
+                "emoji": "💰"
+            }
+        ]
+    },
+    "shiba-inu": {
+        "idString": "shiba-inu",
+        "name": "Shiba Inu",
+        "seedPhrase": "#shibainu",
+        "symbol": "SHI",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": [
+            {
+                "id": "49451634",
+                "name": "Cryptocurrencies",
+                "emoji": "💰"
+            }
+        ]
+    },
+    "cardano": {
+        "idString": "cardano",
+        "name": "Cardano",
+        "seedPhrase": "#cardano",
+        "symbol": "CRD",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": [
+            {
+                "id": "49451634",
+                "name": "Cryptocurrencies",
+                "emoji": "💰"
+            }
+        ]
+    },
+    "binance": {
+        "idString": "binance",
+        "name": "Binance",
+        "seedPhrase": "#binance",
+        "symbol": "BNC",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": [
+            {
+                "id": "49451634",
+                "name": "Cryptocurrencies",
+                "emoji": "💰"
+            }
+        ]
+    },
+    "javascript": {
+        "idString": "javascript",
+        "name": "JavaScript",
+        "seedPhrase": "#javascript",
+        "symbol": "JVS",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": [
+            {
+                "id": "53037643",
+                "name": "Programming",
+                "emoji": ""
+            }
+        ]
+    },
+    "solana": {
+        "idString": "solana",
+        "name": "Solana",
+        "seedPhrase": "#solana",
+        "symbol": "SOL",
+        "visible": true,
+        "communityStatus": "published",
+        "themeColor": {
+            "hex": "#9945FF"
+        },
+        "category": [
+            {
+                "id": "49451634",
+                "name": "Cryptocurrencies",
+                "emoji": "💰"
+            }
+        ]
+    },
+    "machine-learning": {
+        "idString": "machine-learning",
+        "name": "Machine Learning",
+        "seedPhrase": "#machinelearning",
+        "symbol": "MLR",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": [
+            {
+                "id": "53037643",
+                "name": "Programming",
+                "emoji": ""
+            }
+        ]
+    },
+    "physics": {
+        "idString": "physics",
+        "name": "Physics",
+        "seedPhrase": "#Physicist, #Physics",
+        "symbol": "PHY",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": [
+            {
+                "id": "53037663",
+                "name": "Education",
+                "emoji": ""
+            }
+        ]
+    },
+    "chess": {
+        "idString": "chess",
+        "name": "Chess",
+        "seedPhrase": "#chess",
+        "symbol": "CHS",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "climate": {
+        "idString": "climate",
+        "name": "Climate",
+        "seedPhrase": "#climate",
+        "symbol": "CMT",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "mit": {
+        "idString": "mit",
+        "name": "MIT",
+        "seedPhrase": "",
+        "symbol": "MIT",
+        "visible": false,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#A31F34"
+        },
+        "category": [
+            {
+                "id": "53037663",
+                "name": "Education",
+                "emoji": ""
+            }
+        ]
+    },
+    "new-york-times": {
+        "idString": "new-york-times",
+        "name": "New York Times",
+        "seedPhrase": "nyt",
+        "symbol": "NYT",
+        "visible": false,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#BBBBBB"
+        },
+        "category": [
+            {
+                "id": "49489873",
+                "name": "Media and Information",
+                "emoji": "📰"
+            }
+        ]
+    },
+    "apple": {
+        "idString": "apple",
+        "name": "Apple",
+        "seedPhrase": "#apple",
+        "symbol": "APC",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "vc": {
+        "idString": "vc",
+        "name": "VC",
+        "seedPhrase": "\"Venture Capital\"",
+        "symbol": "VCC",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "formula-1": {
+        "idString": "formula-1",
+        "name": "Formula 1",
+        "seedPhrase": "#f1, #formula1",
+        "symbol": "FMO",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#EE0000"
+        },
+        "category": [
+            {
+                "id": "49489748",
+                "name": "Automotive",
+                "emoji": "🏎"
+            }
+        ]
+    },
+    "yoga": {
+        "idString": "yoga",
+        "name": "Yoga",
+        "seedPhrase": "#yoga",
+        "symbol": "YOG",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "seo": {
+        "idString": "seo",
+        "name": "SEO",
+        "seedPhrase": "#seo",
+        "symbol": "SEO",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "virology": {
+        "idString": "virology",
+        "name": "Virology",
+        "seedPhrase": "#virology",
+        "symbol": "VRL",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "nocode": {
+        "idString": "nocode",
+        "name": "NoCode",
+        "seedPhrase": "#nocode",
+        "symbol": "NCD",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": [
+            {
+                "id": "53037643",
+                "name": "Programming",
+                "emoji": ""
+            }
+        ]
+    },
+    "vegan": {
+        "idString": "vegan",
+        "name": "Vegan",
+        "seedPhrase": "#vegan",
+        "symbol": "VGN",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "cannabis": {
+        "idString": "cannabis",
+        "name": "Cannabis",
+        "seedPhrase": "",
+        "symbol": "CNB",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "google": {
+        "idString": "google",
+        "name": "Google",
+        "seedPhrase": "#google",
+        "symbol": "GGL",
+        "visible": true,
+        "communityStatus": "pending",
+        "themeColor": {
+            "hex": "#5640FF"
+        },
+        "category": []
+    },
+    "bitcoin": {
+        "idString": "bitcoin",
+        "name": "Bitcoin",
+        "seedPhrase": "#bitcoin",
+        "symbol": "BTC",
+        "visible": true,
+        "communityStatus": "published",
+        "themeColor": {
+            "hex": "#F7931A"
+        },
+        "category": [
+            {
+                "id": "49451634",
+                "name": "Cryptocurrencies",
+                "emoji": "💰"
+            }
+        ]
+    },
+    "ethereum": {
+        "idString": "ethereum",
+        "name": "Ethereum",
+        "seedPhrase": "#ethereum",
+        "symbol": "ETH",
+        "visible": true,
+        "communityStatus": "published",
+        "themeColor": {
+            "hex": "#62688F"
+        },
+        "category": [
+            {
+                "id": "49451634",
+                "name": "Cryptocurrencies",
+                "emoji": "💰"
+            }
+        ]
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "react_seed": {
+        "containers": {
+            "searchView": {
+                "nothingHasBeenFound": "Nothing has been found"
+            }
+        }
+    }
+}
