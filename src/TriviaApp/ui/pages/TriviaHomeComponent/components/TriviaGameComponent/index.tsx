@@ -40,6 +40,8 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
         try {
             const triviaQuestionsFetch: TriviaQuestionsResponse = await receiveQuestions();
 
+            console.log(JSON.stringify(triviaQuestionsFetch))
+
             if (triviaQuestionsFetch && triviaQuestionsFetch.responseCode === 0) {
                 setTriviaQuestions(triviaQuestionsFetch.results);
                 setStartGame(true);

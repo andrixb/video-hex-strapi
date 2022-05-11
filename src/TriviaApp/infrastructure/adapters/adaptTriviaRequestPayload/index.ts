@@ -5,7 +5,7 @@ export interface ITriviaRequestPayloadResponse {
     results: TriviaQuestion[];
 }
 
-interface ITriviaQuestionsResults {
+export interface ITriviaQuestionsResults {
     category: string;
     type: string;
     difficulty: string;

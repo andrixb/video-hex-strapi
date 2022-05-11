@@ -13,7 +13,7 @@ export type TriviaQuestionsResponse = {
     results: TriviaQuestion[];
 }
 
-export default async function getCommunities({
+export default async function getTriviaQuestions({
     amount = 10, difficulty = 'hard', type = 'boolean'
 }: getTriviaQuestionsProps): Promise<TriviaQuestionsResponse> {
     const BASE_API_URL = 'https://opentdb.com/api.php';
@@ -24,5 +24,6 @@ export default async function getCommunities({
     const { data } = await apiInstance.get<ITriviaRequestPayloadResponse>(`
         ${BASE_API_URL}?${API_PARAMS_AMOUNT}=${amount}&${API_PARAMS_DIFFICULTY}=${difficulty}&${API_PARAMS_TYPE}=${type}
     `, {});
+
     return adaptTriviaQuestionsPayload(data);
 }

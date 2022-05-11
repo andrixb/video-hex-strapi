@@ -1,21 +1,22 @@
-export const mockPayload = {
+export const mockTrivialQuestionsPayload = {
     response_code: 0,
     results: [
         {
-            category: 'Entertainment: Video Games',
+            category: 'Vehicles',
             type: 'boolean',
             difficulty: 'hard',
-            question: 'Unturned originally started as a Roblox game.',
+            question:
+                'In 1993 Swedish car manufacturer Saab experimented with replacing the steering wheel with a joystick in a Saab 9000.',
             correct_answer: 'True',
             incorrect_answers: ['False'],
         },
         {
-            category: 'Entertainment: Comics',
+            category: 'History',
             type: 'boolean',
             difficulty: 'hard',
-            question: 'In the comic book &quot;Archie&quot;, Betty is friends with Veronica because she is rich.',
-            correct_answer: 'False',
-            incorrect_answers: ['True'],
+            question: 'Japan was part of the Allied Powers during World War I.',
+            correct_answer: 'True',
+            incorrect_answers: ['False'],
         },
         {
             category: 'Entertainment: Video Games',

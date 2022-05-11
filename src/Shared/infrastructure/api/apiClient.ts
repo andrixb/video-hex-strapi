@@ -1,5 +1,4 @@
 import axios from "axios";
-// import auth0Client from "../auth0";
 import { getEnvironmentVariable } from "../types/EnvironmentVariables";
 
 import interceptors from "./interceptors";
@@ -9,7 +8,6 @@ export const apiClient = () => {
     baseURL: getEnvironmentVariable("API"),
     headers: {
       "Content-Type": "application/json",
-      // Authorization: `Bearer ${auth0Client.getAccessToken()}`,
     },
   });
 
