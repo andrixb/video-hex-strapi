@@ -1,6 +1,6 @@
 import { makeStyles } from '@mui/styles';
 
-interface SearchViewComponentStylesTheme {
+interface TriviaHomeComponentStylesTheme {
 	mixins: any;
 	zIndex: any;
 	transitions: any;
@@ -8,7 +8,7 @@ interface SearchViewComponentStylesTheme {
 	spacing: any;
 };
 
-export const useSearchViewComponentStyles = makeStyles((theme: SearchViewComponentStylesTheme) => ({
+export const useTriviaHomeComponentStyles = makeStyles((theme: TriviaHomeComponentStylesTheme) => ({
 	root: {
 		display: 'flex',
 	},
