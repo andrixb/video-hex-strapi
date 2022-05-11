@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Box, Button, ButtonGroup, Stack, Typography } from '@mui/material';
 
 import useGetTriviaQuestions from '../../../../../infrastructure/hooks/useGetTriviaQuestions';
@@ -14,9 +14,16 @@ export interface TriviaGameComponentProps {
     classes?: any;
 }
 
+export interface TriviaQuestionAnswered {
+    questionNumber: number;
+    answer: boolean;
+}
+
 export default function TriviaGameComponent({ classes }: TriviaGameComponentProps) {
     const [score, setScore] = useState<number>(0);
     const [currentQuestion, setCurrentQuestion] = useState<number>(0);
+    const [answeredQuestions, setAnsweredQuestions] = useState<TriviaQuestionAnswered[]>([]);
+    const [showBeginGame, setShowBeginGame] = useState<boolean>(true);
     const [showScore, setShowScore] = useState<boolean>(false);
     const [triviaQuestions, setTriviaQuestions] = useState<TriviaQuestion[]>([]);
 
@@ -26,7 +33,6 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
 
     const [triviaQuestionsError, setTriviaQuestionsError] = useState<unknown>();
 
-    const { t } = useTranslation();
     const receiveQuestions = useGetTriviaQuestions({ amount, type, difficulty });
 
     const startTriviaGame = async (amount: number, type: string, difficulty: string) => {
@@ -35,9 +41,11 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
 
             if (triviaQuestionsFetch && triviaQuestionsFetch.responseCode === 0) {
                 setTriviaQuestions(triviaQuestionsFetch.results);
+                setShowBeginGame(false);
             }
         } catch (error) {
             setTriviaQuestionsError(error);
+            setShowBeginGame(true);
         }
     };
 
@@ -49,8 +57,15 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
     const handleAnswerOptionClick = (event: any) => {
         const { textContent } = event.target as HTMLButtonElement;
 
-        if (textContent && textContent === triviaQuestions[currentQuestion].correctAnswer) {
-            setScore(score + 1);
+        if (textContent) {
+            setScore(textContent === triviaQuestions[currentQuestion].correctAnswer ? score + 1 : score);
+            setAnsweredQuestions([
+                ...answeredQuestions,
+                {
+                    questionNumber: currentQuestion,
+                    answer: textContent === triviaQuestions[currentQuestion].correctAnswer ? true : false,
+                },
+            ]);
         }
 
         const nextQuestion = currentQuestion + 1;
@@ -62,14 +77,38 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
         }
     };
 
+    const handleNewGame = () => {
+        setShowBeginGame(true);
+    };
+
+    // useEffect(() => {
+    //     if (showBeginGame) {
+    //         setShowScore(false);
+    //         setTriviaQuestions([]);
+    //     }
+    // }, [showBeginGame]);
+
     return (
         <Box component="div">
             <Stack spacing={2} sx={{ width: 300 }}>
-                <Button variant="contained" onClick={() => handleGetQuestions(amount, type, difficulty)}>
-                    {t('react_seed.containers.trivialGame.startGame')}
-                </Button>
+                {showBeginGame ? (
+                    <Button variant="contained" onClick={() => handleGetQuestions(amount, type, difficulty)}>
+                        Begin
+                    </Button>
+                ) : (
+                    <></>
+                )}
 
-                {showScore ? <TriviaGameScoreComponent score={score} questions={triviaQuestions} /> : <></>}
+                {showScore ? (
+                    <TriviaGameScoreComponent
+                        score={score}
+                        triviaQuestions={triviaQuestions}
+                        answeredQuestions={answeredQuestions}
+                        onNewGame={handleNewGame}
+                    />
+                ) : (
+                    <></>
+                )}
 
                 {triviaQuestions.length > 0 ? (
                     <>
@@ -88,6 +127,7 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
                 ) : (
                     <></>
                 )}
+
                 {triviaQuestionsError ? <Typography>triviaQuestionsError</Typography> : <></>}
             </Stack>
         </Box>
