@@ -36,7 +36,7 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
     const { amount, type, difficulty } = useAPIParams();
     const receiveQuestions = useGetTriviaQuestions({ amount, type, difficulty });
 
-    const startTriviaGame = async (amount: number, type: string, difficulty: string) => {
+    const startTriviaGame = async () => {
         try {
             const triviaQuestionsFetch: TriviaQuestionsResponse = await receiveQuestions();
 
@@ -50,8 +50,8 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
     };
 
     const handleGetQuestions = useCallback(
-        (amount: number, type: string, difficulty: string) => startTriviaGame(amount, type, difficulty),
-        []
+        () => startTriviaGame(),
+        [resetGame]
     );
 
     const handleAnswerOptionClick = (event: any) => {
@@ -86,7 +86,11 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
     useEffect(() => {
         setShowScore(false);
         setStartGame(false);
+        setScore(0);
         setTriviaQuestions([]);
+        setAnsweredQuestions([]);
+        setCurrentQuestion(0);
+        setResetGame(false);
     }, [resetGame]);
 
     return (
@@ -110,7 +114,7 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
                     <Typography variant="h2"> Welcome to the Trivia Challenge</Typography>
                     <Typography variant="body1"> You will be presented with 10 True or False questions</Typography>
                     <Typography variant="body1"> Can you score 100%?</Typography>
-                    <Button variant="contained" onClick={() => handleGetQuestions(amount, type, difficulty)}>
+                    <Button variant="contained" onClick={handleGetQuestions}>
                         Begin
                     </Button>
                 </Box>
