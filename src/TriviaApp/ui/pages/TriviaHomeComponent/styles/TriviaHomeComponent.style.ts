@@ -10,15 +10,13 @@ interface TriviaHomeComponentStylesTheme {
 
 export const useTriviaHomeComponentStyles = makeStyles((theme: TriviaHomeComponentStylesTheme) => ({
 	root: {
-		display: 'flex',
 		width: '100%',
-		alignItems: 'center'
 	},
 	content: {
-		flexGrow: 1,
-		marginTop: 100,
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
 		padding: 18,
-		height: '100vh',
 		overflow: 'auto',
 	},
 }));

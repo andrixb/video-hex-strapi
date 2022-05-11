@@ -10,6 +10,8 @@ import TriviaQuestion from '../../../../../domain/entities/TriviaQuestion';
 import { TriviaGameScoreComponent } from '../TriviaGameScore';
 import { TriviaGameQuestionComponent } from '../TriviaGameQuestion';
 
+import useAPIParams from '../../../../../infrastructure/hooks/useAPIParams';
+
 export interface TriviaGameComponentProps {
     classes?: any;
 }
@@ -23,16 +25,15 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
     const [score, setScore] = useState<number>(0);
     const [currentQuestion, setCurrentQuestion] = useState<number>(0);
     const [answeredQuestions, setAnsweredQuestions] = useState<TriviaQuestionAnswered[]>([]);
-    const [showBeginGame, setShowBeginGame] = useState<boolean>(true);
+
     const [showScore, setShowScore] = useState<boolean>(false);
+    const [startGame, setStartGame] = useState<boolean>(true);
+    const [resetGame, setResetGame] = useState<boolean>(false);
+
     const [triviaQuestions, setTriviaQuestions] = useState<TriviaQuestion[]>([]);
-
-    const [amount] = useState<number>(10);
-    const [type] = useState<string>('boolean');
-    const [difficulty] = useState<string>('hard');
-
     const [triviaQuestionsError, setTriviaQuestionsError] = useState<unknown>();
 
+    const { amount, type, difficulty } = useAPIParams();
     const receiveQuestions = useGetTriviaQuestions({ amount, type, difficulty });
 
     const startTriviaGame = async (amount: number, type: string, difficulty: string) => {
@@ -41,11 +42,10 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
 
             if (triviaQuestionsFetch && triviaQuestionsFetch.responseCode === 0) {
                 setTriviaQuestions(triviaQuestionsFetch.results);
-                setShowBeginGame(false);
+                setStartGame(true);
             }
         } catch (error) {
             setTriviaQuestionsError(error);
-            setShowBeginGame(true);
         }
     };
 
@@ -77,59 +77,77 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
         }
     };
 
-    const handleNewGame = () => {
-        setShowBeginGame(true);
+    const handleResetGame = (event: any) => {
+        if (event) {
+            setResetGame(true);
+        }
     };
 
-    // useEffect(() => {
-    //     if (showBeginGame) {
-    //         setShowScore(false);
-    //         setTriviaQuestions([]);
-    //     }
-    // }, [showBeginGame]);
+    useEffect(() => {
+        setShowScore(false);
+        setStartGame(false);
+        setTriviaQuestions([]);
+    }, [resetGame]);
 
     return (
-        <Box component="div">
-            <Stack spacing={2} sx={{ width: 300 }}>
-                {showBeginGame ? (
+        <Box
+            component="div"
+            sx={{
+                display: 'flex',
+                textAlign: 'center',
+                flexFlow: 'column',
+                width: 500,
+                alignItems: 'center',
+            }}
+        >
+            {!startGame ? (
+                <Box sx={{
+                    display: 'flex',
+                    flexFlow: 'column',
+                    justifyContent: 'space-evenly',
+                    height: 500,
+                }}>
+                    <Typography variant="h2"> Welcome to the Trivia Challenge</Typography>
+                    <Typography variant="body1"> You will be presented with 10 True or False questions</Typography>
+                    <Typography variant="body1"> Can you score 100%?</Typography>
                     <Button variant="contained" onClick={() => handleGetQuestions(amount, type, difficulty)}>
                         Begin
                     </Button>
-                ) : (
-                    <></>
-                )}
+                </Box>
+            ) : (
+                <></>
+            )}
 
-                {showScore ? (
-                    <TriviaGameScoreComponent
-                        score={score}
-                        triviaQuestions={triviaQuestions}
-                        answeredQuestions={answeredQuestions}
-                        onNewGame={handleNewGame}
+            {showScore && startGame ? (
+                <TriviaGameScoreComponent
+                    score={score}
+                    triviaQuestions={triviaQuestions}
+                    answeredQuestions={answeredQuestions}
+                    onNewGame={handleResetGame}
+                />
+            ) : (
+                <></>
+            )}
+
+            {triviaQuestions.length > 0 && startGame && !showScore ? (
+                <>
+                    <TriviaGameQuestionComponent
+                        category={triviaQuestions[currentQuestion].category}
+                        question={triviaQuestions[currentQuestion].question}
+                        currentQuestion={currentQuestion}
+                        totalQuestionsNumber={triviaQuestions.length}
                     />
-                ) : (
-                    <></>
-                )}
 
-                {triviaQuestions.length > 0 ? (
-                    <>
-                        <TriviaGameQuestionComponent
-                            category={triviaQuestions[currentQuestion].category}
-                            question={triviaQuestions[currentQuestion].question}
-                            currentQuestion={currentQuestion}
-                            totalQuestionsNumber={triviaQuestions.length}
-                        />
+                    <ButtonGroup onClick={handleAnswerOptionClick}>
+                        <Button>True</Button>
+                        <Button>False</Button>
+                    </ButtonGroup>
+                </>
+            ) : (
+                <></>
+            )}
 
-                        <ButtonGroup variant="contained" onClick={handleAnswerOptionClick}>
-                            <Button>True</Button>
-                            <Button>False</Button>
-                        </ButtonGroup>
-                    </>
-                ) : (
-                    <></>
-                )}
-
-                {triviaQuestionsError ? <Typography>triviaQuestionsError</Typography> : <></>}
-            </Stack>
+            {triviaQuestionsError ? <Typography>triviaQuestionsError</Typography> : <></>}
         </Box>
     );
 }

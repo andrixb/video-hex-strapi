@@ -23,12 +23,13 @@ export const TriviaGameQuestionComponent = ({
         <Box
             component="div"
             sx={{
-                display: 'flex',
                 padding: '25px',
-                width: 300,
-                height: 300,
-                textAlign: 'center',
+                height: 250,
+                width: 250,
+                display: 'flex',
+                flexDirection: 'column',
                 alignItems: 'center',
+                justifyContent: 'space-evenly',
                 border: '1px solid black',
             }}
         >
