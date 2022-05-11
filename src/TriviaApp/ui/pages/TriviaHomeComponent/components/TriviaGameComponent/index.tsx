@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import React, { useCallback, useEffect, useState } from 'react';
-import { Box, Button, ButtonGroup, Stack, Typography } from '@mui/material';
+import { Box, Button, ButtonGroup, Typography } from '@mui/material';
 
 import useGetTriviaQuestions from '../../../../../infrastructure/hooks/useGetTriviaQuestions';
 import { TriviaQuestionsResponse } from '../../../../../infrastructure/repositories/getTriviaQuestions';
