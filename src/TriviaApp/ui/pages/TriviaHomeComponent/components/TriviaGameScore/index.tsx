@@ -30,6 +30,6 @@ export const TriviaGameScoreComponent = ({score, triviaQuestions, answeredQuesti
             )}
         </>
         </List>
-        <Button variant="contained" onClick={(event) => onNewGame(event)}>Play Again</Button>
+        <Button variant="contained" onClick={(event) => onNewGame(event)} data-test="new-game-btn">Play Again</Button>
     </Box>
 );

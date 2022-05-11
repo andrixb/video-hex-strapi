@@ -1,6 +1,7 @@
 import { jest, expect } from '@jest/globals';
 import getTriviaQuestions from '.';
-import { triviaQuestionsAxiosResponseMock } from '../../../../../__tests__/__mocks__/axiosResponses/triviaQuestionsAxiosResponse.mock';
+import { triviaQuestionsAxiosResponseMock } from '../../../../../__tests__/__mocks__/axiosResponse/triviaQuestionsAxiosResponse.mock';
+
 import { apiInstance } from '../../../../Shared/infrastructure/api/apiClient';
 
 const postStub = jest.spyOn(apiInstance, 'post');
@@ -16,5 +17,3 @@ describe('getTriviaQuestions', () => {
         );
     });
 });
-
-

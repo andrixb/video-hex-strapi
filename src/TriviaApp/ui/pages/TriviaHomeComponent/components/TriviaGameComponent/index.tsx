@@ -116,7 +116,7 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
                     <Typography variant="h2"> Welcome to the Trivia Challenge</Typography>
                     <Typography variant="body1"> You will be presented with 10 True or False questions</Typography>
                     <Typography variant="body1"> Can you score 100%?</Typography>
-                    <Button variant="contained" onClick={handleGetQuestions}>
+                    <Button variant="contained" onClick={handleGetQuestions} data-test="home-btn">
                         Begin
                     </Button>
                 </Box>
@@ -145,8 +145,8 @@ export default function TriviaGameComponent({ classes }: TriviaGameComponentProp
                     />
 
                     <ButtonGroup onClick={handleAnswerOptionClick}>
-                        <Button>True</Button>
-                        <Button>False</Button>
+                        <Button data-test="answer-true-btn">True</Button>
+                        <Button data-test="answer-false-btn">False</Button>
                     </ButtonGroup>
                 </>
             ) : (
