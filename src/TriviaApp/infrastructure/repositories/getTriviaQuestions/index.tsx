@@ -1,6 +1,6 @@
 import { apiInstance } from '../../../../Shared/infrastructure/api/apiClient';
 import TriviaQuestion from '../../../domain/entities/TriviaQuestion';
-import adaptTriviaQuestionsPayload, { TriviaQuestionsPayloadResponse } from '../../adapters/adaptTriviaQuestionsPayload';
+import adaptTriviaQuestionsPayload, { ITriviaRequestPayloadResponse } from '../../adapters/adaptTriviaRequestPayload';
 
 interface getTriviaQuestionsProps {
    amount?: number;
@@ -21,7 +21,7 @@ export default async function getCommunities({
     const API_PARAMS_DIFFICULTY = 'difficulty';
     const API_PARAMS_TYPE = 'type';
 
-    const { data } = await apiInstance.get<TriviaQuestionsPayloadResponse>(`
+    const { data } = await apiInstance.get<ITriviaRequestPayloadResponse>(`
         ${BASE_API_URL}?${API_PARAMS_AMOUNT}=${amount}&${API_PARAMS_DIFFICULTY}=${difficulty}&${API_PARAMS_TYPE}=${type}
     `, {});
     return adaptTriviaQuestionsPayload(data);

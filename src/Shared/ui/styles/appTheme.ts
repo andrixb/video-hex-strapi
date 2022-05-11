@@ -120,25 +120,6 @@ export const componentsOverrides = {
             },
         },
     },
-    MuiCircularProgress: {
-        styleOverrides: {
-            colorPrimary: {
-                color: mediumGreen,
-            },
-        },
-    },
-    MuiSnackbar: {
-        styleOverrides: {
-            root: {
-                borderRadius: '8px',
-            },
-            anchorOriginTopCenter: {
-                top: '16px',
-                left: '16px',
-                right: '16px',
-            },
-        },
-    },
     ...typographyColors,
 };
 

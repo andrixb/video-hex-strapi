@@ -13,7 +13,7 @@ export default function TriviaHomeComponent(props: TriviaHomeComponentProps) {
     const classes = useTriviaHomeComponentStyles();
 
     return (
-        <Container sx={{ display: 'flex' }}>
+        <Container>
             <main className={classes.content}>
                 <TriviaGameComponent />
             </main>

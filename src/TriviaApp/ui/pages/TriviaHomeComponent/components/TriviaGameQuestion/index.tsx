@@ -1,41 +1,41 @@
 import React from 'react';
+import { Box } from '@mui/system';
 import { Typography } from '@mui/material';
 import convertSpecialCharacters from '../../../../../../Shared/infrastructure/helpers/convertSpecialCharacters';
-import { Box } from '@mui/system';
 
-interface TriviaGameQuestionProps {
+interface TriviaGameQuestionComponentProps {
     category: string;
     question: string;
-    questionNumber: number;
+    currentQuestion: number;
     totalQuestionsNumber: number;
 }
 
-export default function TriviaGameQuestion({
+export const TriviaGameQuestionComponent = ({
     category,
     question,
-    questionNumber,
+    currentQuestion,
     totalQuestionsNumber,
-}: TriviaGameQuestionProps) {
-    return (
-        <>
-            <Typography variant="h3" align="center">{category}</Typography>
-            <Box
-                component="div"
-                sx={{
-                    display: 'flex',
-                    padding: '25px',
-                    width: 300,
-                    height: 300,
-                    textAlign: 'center',
-                    alignItems: 'center',
-                    border: '1px solid black'
-                }}
-            >
-                <Typography>{convertSpecialCharacters(question)}</Typography>
-            </Box>
-            <Typography variant="body2">
-                {questionNumber + 1} of {totalQuestionsNumber}
-            </Typography>
-        </>
-    );
-}
+}: TriviaGameQuestionComponentProps) => (
+    <>
+        <Typography variant="h3" align="center">
+            {category}
+        </Typography>
+        <Box
+            component="div"
+            sx={{
+                display: 'flex',
+                padding: '25px',
+                width: 300,
+                height: 300,
+                textAlign: 'center',
+                alignItems: 'center',
+                border: '1px solid black',
+            }}
+        >
+            <Typography>{convertSpecialCharacters(question)}</Typography>
+        </Box>
+        <Typography variant="body2">
+            {currentQuestion + 1} of {totalQuestionsNumber}
+        </Typography>
+    </>
+);

@@ -11,7 +11,7 @@ interface TriviaHomeComponentStylesTheme {
 export const useTriviaHomeComponentStyles = makeStyles((theme: TriviaHomeComponentStylesTheme) => ({
 	root: {
 		display: 'flex',
-		width: 500,
+		width: '100%',
 		alignItems: 'center'
 	},
 	content: {
