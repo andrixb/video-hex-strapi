@@ -1,7 +1,7 @@
 export const mockVideosListPayload = {
     data: [
         {
-            id: 1,
+            id: 1, 
             attributes: {
                 isPublic: true,
                 slug: 'julian-lage-ryland',

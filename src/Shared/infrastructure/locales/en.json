@@ -1,9 +1,7 @@
 {
     "react_seed": {
         "containers": {
-            "trivialGame": {
-                "startGame": "Start Game"
-            }
+        
         }
     }
 }

@@ -5,8 +5,6 @@ import Video from '../../../domain/entities/Video';
 import adaptVideosListRequestPayload from '../../adapters/adaptVideosRequestPayload';
 import { IVideosListRequestPayloadResponse } from '../../interfaces/IVideosListRequestPayloadResponse';
 
-interface getVideosListProps {}
-
 export type VideosListResponse = {
     data: Video[];
     meta: Meta;

@@ -1,7 +1,6 @@
-import { useTranslation } from 'react-i18next';
-
 import React, { useEffect, useState } from 'react';
-import { Box, Grid, Typography } from '@mui/material';
+import Link from 'next/link';
+import { Box, Grid, Typography, Button } from '@mui/material';
 
 import useGetVideosList from '../../../../../infrastructure/hooks/useGetVideosList';
 import { VideosListResponse } from '../../../../../infrastructure/repositories/getVideosList';
@@ -10,12 +9,13 @@ import VideoType from '../../../../../domain/entities/Video';
 import MetaType from '../../../../../domain/entities/Meta';
 
 import { VideoCard } from '../VideoCard';
+import { useVideosHomeComponentStyles } from '../../styles/VideosHomeComponent.style';
 
 export interface VideosListComponentProps {
-    classes?: any;
 }
 
 export default function VideosListComponent({}: VideosListComponentProps) {
+    const classes = useVideosHomeComponentStyles();
     const [videosList, setVideosList] = useState<VideoType[]>([]);
     const [paginationInfo, setPaginationInfo] = useState<MetaType>();
     const [videosListError, setVideosListError] = useState<unknown>();
@@ -42,6 +42,13 @@ export default function VideosListComponent({}: VideosListComponentProps) {
     return (
         <Box component="div">
             <Typography variant="h2">Videos List</Typography>
+
+            <Box component="div" className={classes.addVideoBtnContainer}>
+                <Link href="/videos/insert">
+                    <Button variant="outlined">Insert new video</Button>
+                </Link>
+            </Box>
+
             {videosList ? (
                 <Grid container spacing={3}>
                     {videosList.map((video: VideoType, index: number) => (
@@ -54,7 +61,7 @@ export default function VideosListComponent({}: VideosListComponentProps) {
                 <></>
             )}
 
-            {videosListError ? <Typography>videosListError</Typography> : <></>}
+            {videosListError ? <Typography>Videos List Error</Typography> : <></>}
         </Box>
     );
 }

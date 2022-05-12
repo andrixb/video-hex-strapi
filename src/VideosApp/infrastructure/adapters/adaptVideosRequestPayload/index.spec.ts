@@ -3,6 +3,7 @@ import adaptVideosRequestPayload from '.';
 import { mockVideosListPayload } from '../../../../../__tests__/__mocks__/videos/videosList.mock';
 import Video from '../../../domain/entities/Video';
 
+
 describe('adaptVideosRequestPayload', () => {
     test('should adapt the request payload', () => {
         expect(adaptVideosRequestPayload(mockVideosListPayload)).toStrictEqual({

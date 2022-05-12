@@ -21,5 +21,9 @@ export const useVideosHomeComponentStyles = makeStyles((theme: VideosHomeCompone
 	},
 	playButton: {
 		justifyContent: 'end',
+	},
+	addVideoBtnContainer: {
+		marginBottom: 18,
+		marginTop: 18,
 	}
 }));

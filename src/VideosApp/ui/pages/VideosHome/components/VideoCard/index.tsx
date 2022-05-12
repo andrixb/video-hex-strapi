@@ -4,6 +4,7 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import { Avatar, Card, CardActions, CardHeader, IconButton, Typography } from '@mui/material';
 import VideoType from '../../../../../domain/entities/Video';
 import { useVideosHomeComponentStyles } from '../../styles/VideosHomeComponent.style';
+import { extractVideoIdFromUrl } from '../../../../../infrastructure/helpers/extractVideoIdfromUrl';
 
 export interface VideoCardProps {
     video: VideoType;
@@ -16,7 +17,7 @@ export const VideoCard = ({ video }: VideoCardProps) => {
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe">
-                        <Typography variant="h5">{video.title[0]}</Typography>
+                        <Typography variant="h5">{video.title}</Typography>
                     </Avatar>
                 }
                 title={<Typography variant="h5">{video.title}</Typography>}
@@ -25,7 +26,7 @@ export const VideoCard = ({ video }: VideoCardProps) => {
             <CardActions disableSpacing className={classes.playButton}>
                 <Link
                     as={`/videos/player/${video.slug}`}
-                    href={`/videos/player/${video.slug}?videoId=${video.url.split('/')[3].split('=')[1]}`}
+                    href={`/videos/player/${video.slug}?videoId=${extractVideoIdFromUrl(video.url)}`}
                 >
                     <IconButton aria-label="play video">
                         <PlayCircleIcon />
