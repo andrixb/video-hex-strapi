@@ -19,4 +19,7 @@ export const useVideosHomeComponentStyles = makeStyles((theme: VideosHomeCompone
 		padding: 18,
 		overflow: 'auto',
 	},
+	playButton: {
+		justifyContent: 'end',
+	}
 }));

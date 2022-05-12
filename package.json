@@ -34,6 +34,7 @@
 		"@mui/icons-material": "^5.6.2",
 		"@mui/material": "^5.6.2",
 		"@mui/styles": "^5.6.2",
+		"@types/react-youtube": "^7.10.0",
 		"axios": "^0.27.2",
 		"classnames": "^2.3.1",
 		"core-js": "^3.22.2",
@@ -48,6 +49,7 @@
 		"react-hook-form": "^7.30.0",
 		"react-i18next": "^11.16.7",
 		"react-query": "^3.38.0",
+		"react-youtube": "^9.0.1",
 		"recharts": "^2.1.9"
 	},
 	"devDependencies": {

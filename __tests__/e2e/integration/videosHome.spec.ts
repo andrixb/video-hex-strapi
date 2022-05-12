@@ -1,11 +1,7 @@
 describe('Load Home Page', () => {
-	it('should navigate to the home page', () => {
-		cy.visit('/trivia');
-
-		cy.get('*[data-test*="home-btn"]').click();
-
-		cy.url().should('include', '/trivia');
-
-		cy.get('h2').contains('Welcome to the Trivia Challenge');
-	})
+    it('should navigate to the home page', () => {
+        cy.visit('/videos');
+        cy.url().should('include', '/videos');
+        cy.get('h2').contains('Videos List');
+    });
 });
