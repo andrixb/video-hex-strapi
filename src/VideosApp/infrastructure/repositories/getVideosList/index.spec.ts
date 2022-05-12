@@ -10,7 +10,7 @@ describe('getVideos', () => {
     it('fetches successfully data from an API', async () => {
         postStub.mockImplementationOnce(async () => videosAxiosResponseMock());
 
-        const response = await getVideos({});
+        const response = await getVideos();
 
         expect(response).toEqual(
             videosAxiosResponseMock().data

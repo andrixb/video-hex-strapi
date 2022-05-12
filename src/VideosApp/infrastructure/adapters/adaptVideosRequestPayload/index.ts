@@ -1,23 +1,22 @@
 import Video from '../../../domain/entities/Video';
+import { IVideosListRequestPayloadResponse } from '../../interfaces/IVideosListRequestPayloadResponse';
+import { VideosListResponse } from '../../repositories/getVideosList';
 
-
-export interface IVideosRequestPayloadResponse {
-   data: Video[];
-}
-
-export default function adaptTriviaRequestPayload(data: any): IVideosRequestPayloadResponse {
+export default function adaptVideosListRequestPayload(
+    response: IVideosListRequestPayloadResponse
+): VideosListResponse {
     return {
-        // responseCode: data.response_code,
-        // results: data.results.map(
-        //     (result: IVideosResults) =>
-        //         new Video(
-                    // result.category,
-                    // result.type,
-                    // result.difficulty,
-                    // result.question,
-                    // result.correct_answer,
-                    // result.incorrect_answers
-        //         )
-        // ),
+        data: response.data.map(
+            (result) =>
+                new Video(
+                    result.id,
+                    result.attributes.title,
+                    result.attributes.slug,
+                    result.attributes.url,
+                    result.attributes.isPublic,
+                    result.attributes.author
+                )
+        ),
+        meta: response.meta,
     };
 }

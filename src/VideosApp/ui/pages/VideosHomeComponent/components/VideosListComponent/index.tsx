@@ -1,51 +1,60 @@
 import { useTranslation } from 'react-i18next';
 import React, { useCallback, useEffect, useState } from 'react';
-import { Box, Button, ButtonGroup, Typography } from '@mui/material';
+import {
+    Avatar,
+    Box,
+    Button,
+    Card,
+    CardActions,
+    CardContent,
+    CardHeader,
+    CardMedia,
+    Grid,
+    IconButton,
+    List,
+    ListItem,
+    Typography,
+} from '@mui/material';
 
-import useGetVideos from '../../../../../infrastructure/hooks/useGetVideos';
-import { VideosResponse } from '../../../../../infrastructure/repositories/getVideos';
+import useGetVideosList from '../../../../../infrastructure/hooks/useGetVideosList';
+import { VideosListResponse } from '../../../../../infrastructure/repositories/getVideosList';
 
-import Video from '../../../../../domain/entities/Video';
-
+import VideoType from '../../../../../domain/entities/Video';
+import MetaType from '../../../../../domain/entities/Meta';
 
 import useAPIParams from '../../../../../infrastructure/hooks/useAPIParams';
+import Video from '../../../../../domain/entities/Video';
+import Link from 'next/link';
 
 export interface VideosListComponentProps {
     classes?: any;
 }
 
-
-export default function TriviaGameComponent({ classes }: VideosListComponentProps) {
-    // const [score, setScore] = useState<number>(0);
-    // const [currentQuestion, setCurrentQuestion] = useState<number>(0);
-    // const [answeredQuestions, setAnsweredQuestions] = useState<TriviaQuestionAnswered[]>([]);
-
-    // const [showScore, setShowScore] = useState<boolean>(false);
-    // const [startGame, setStartGame] = useState<boolean>(true);
-    // const [resetGame, setResetGame] = useState<boolean>(false);
-
-    const [videosList, setVideosList] = useState<Video[]>([]);
+export default function VideosListComponent({ classes }: VideosListComponentProps) {
+    const [videosList, setVideosList] = useState<VideoType[]>([]);
+    const [paginationInfo, setPaginationInfo] = useState<MetaType>();
     const [videosListError, setVideosListError] = useState<unknown>();
 
-    // const { amount, type, difficulty } = useAPIParams();
-    const receiveVideos = useGetVideos();
+    const receiveVideosList = useGetVideosList();
 
     const showVideosList = async () => {
         try {
-            const videosFetch: VideosResponse = await receiveVideos();
+            const videosListFetch: VideosListResponse = await receiveVideosList();
 
-            if (videosFetch) {
-                setVideosList(videosFetch.data);
+            if (videosListFetch) {
+                setVideosList(videosListFetch.data);
+                setPaginationInfo(videosListFetch.meta);
             }
         } catch (error) {
             setVideosListError(error);
         }
     };
 
-    const handleGetVideosList = useCallback(
-        () => showVideosList(),
-        []
-    );
+    useEffect(() => {
+        showVideosList();
+    }, []);
+
+    // useCallback(() => showVideosList(),[]);
 
     // const handleAnswerOptionClick = (event: any) => {
     //     const { textContent } = event.target as HTMLButtonElement;
@@ -92,12 +101,45 @@ export default function TriviaGameComponent({ classes }: VideosListComponentProp
             sx={{
                 display: 'flex',
                 textAlign: 'center',
-                flexFlow: 'column',
-                width: 500,
+                flexDirection: 'row',
                 alignItems: 'center',
             }}
         >
-            <Button onClick={handleGetVideosList}>VIDEOS</Button>
+            {videosList ? (
+                <Grid container spacing={3}>
+                    {videosList.map((video: VideoType, index: number) => (
+                        <Grid item xs={8} key={index}>
+                            <Card sx={{ maxWidth: 350 }}>
+                                <CardHeader
+                                    avatar={
+                                        <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe">
+                                            <Typography variant="h5">{video.title[0]}</Typography>
+                                        </Avatar>
+                                    }
+                                    action={<IconButton aria-label="settings">{/* <MoreVertIcon /> */}</IconButton>}
+                                    title={video.title}
+                                    subheader={video.author}
+                                />
+                                <CardMedia
+                                    component="image"
+                                    height="194"
+                                    src={`https://youtube.googleapis.com/youtube/v3/search?url=${video.url}`}
+                                    // alt="Paella dish"
+                                />
+                                <CardActions disableSpacing>
+                                    <Link href={`/player/${video.slug}`}>
+                                        <IconButton aria-label="add to favorites">
+                                            {/* <FavoriteIcon /> */}
+                                        </IconButton>
+                                    </Link>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                    ))}
+                </Grid>
+            ) : (
+                <></>
+            )}
 
             {videosListError ? <Typography>videosListError</Typography> : <></>}
         </Box>

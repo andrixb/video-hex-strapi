@@ -6,7 +6,7 @@ import interceptors from './interceptors';
 
 export const apiClient = () => {
     const axiosInstance = axios.create({
-        baseURL: getEnvironmentVariable('API'),
+        baseURL: getEnvironmentVariable('BASE_URL'),
         headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${getAccessToken()}`,

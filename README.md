@@ -3,7 +3,7 @@
 ## Backend
 
 ```bash
-yarn develop
+cd backend && yarn develop
 ```
 
 [http://localhost:1337/admin](http://localhost:1337/admin)

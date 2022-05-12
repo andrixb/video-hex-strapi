@@ -1,6 +1,7 @@
-type EnvironmentVariable =
-  | "API"
+type EnvironmentVariable = 
+| 'BASE_URL' 
+| 'API_READONLY_TOKEN';
 
 export const getEnvironmentVariable = (key: EnvironmentVariable) => {
-  return process.env[`REACT_APP_${key}`];
+    return process.env[key];
 };

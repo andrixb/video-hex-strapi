@@ -1,4 +1,4 @@
-import { VideosResponse } from '../../../src/VideosApp/infrastructure/repositories/getVideos';
+import { VideosResponse } from '../../../src/VideosApp/infrastructure/repositories/getVideosList';
 import { axiosOKBaseResponseMock } from './axiosBaseResponse.mock';
 
 export const videosAxiosResponseMock = () =>

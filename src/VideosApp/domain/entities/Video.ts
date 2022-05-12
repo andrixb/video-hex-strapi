@@ -2,6 +2,7 @@ import { Properties } from '../../../Shared/infrastructure/types/FunctionPropert
 
 
 export default class Video {
+    id: number;
     title: string;
     slug: string;
     url: string;
@@ -10,12 +11,14 @@ export default class Video {
 
 
     constructor(
+        id: number,
         title: string,
         slug: string,
         url: string,
         isPublic: boolean,
         author: string,
     ) {
+        this.id = id;
         this.title = title;
         this.author = author;
         this.slug = slug;
@@ -24,4 +27,4 @@ export default class Video {
     }
 }
 
-export type VideoConstructor = Properties<Video>;
+export type VideoType = Properties<Video>;
