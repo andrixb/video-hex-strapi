@@ -7,5 +7,5 @@ interface usePostVideoProps {
 }
 
 export default function usePostVideo({ body }: usePostVideoProps) {
-    return () => insertVideo({ body });
+    return insertVideo({ body });
 }

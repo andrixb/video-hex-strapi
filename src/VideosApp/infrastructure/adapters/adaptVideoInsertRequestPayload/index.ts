@@ -3,7 +3,8 @@ import { VideoType } from '../../../domain/entities/Video';
 export default function adaptVideoInsertRequestPayload({ body }: { body: VideoType }) {
     return {
         data: {
-            ...body,
+            title: body.title,
+            author: body.author,
             slug: `${body.title}-${body.author}`,
             isPublic: true,
             createdAt: new Date(Date.now()),

@@ -1,12 +1,11 @@
 import axios from 'axios';
 import getAccessToken from '../auth';
-import { getEnvironmentVariable } from '../types/EnvironmentVariables';
 
 import interceptors from './interceptors';
 
 export const apiClient = () => {
     const axiosInstance = axios.create({
-        baseURL: getEnvironmentVariable('BASE_URL'),
+        baseURL: process.env['NEXT_PUBLIC_BASE_URL'],
         headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${getAccessToken()}`,

@@ -1,24 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { IconButton, Grid } from '@mui/material';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import { useVideosInsertStyles } from './styles/VideoInsert.style';
-import { IFormInput, VideoInsertForm } from './VideoInsertForm';
+import { VideoInsertForm } from './VideoInsertForm';
 import usePostVideo from '../../../infrastructure/hooks/usePostVideo';
+import { VideoType } from '../../../domain/entities/Video';
 
 export interface VideoInsertProps {}
 
 export default function VideoInsertComponent() {
     const classes = useVideosInsertStyles();
-    const [body, setBody] = useState<any>();
-    const { control, handleSubmit } = useForm<IFormInput>();
-    
-    const insertVideo = usePostVideo({ body });
+    const { control, handleSubmit } = useForm<VideoType>();
 
-    const onSubmit: SubmitHandler<IFormInput> = (body) => {
-        setBody(body);
-        insertVideo();
+    const onSubmit: SubmitHandler<VideoType> = (body: VideoType) => {
+        if (body) {
+            usePostVideo({ body });
+        }
     };
 
     return (

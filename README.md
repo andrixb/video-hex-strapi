@@ -28,3 +28,7 @@ In two separates terminals:
 `yarn dev` 
 and
 `yarn cypress`
+
+
+NOTE
+**When adding a new video only use YouTube video url like this one https://www.youtube.com/watch?v=D4KQae9oMWs**

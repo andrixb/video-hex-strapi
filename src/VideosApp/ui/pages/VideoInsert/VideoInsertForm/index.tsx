@@ -1,20 +1,13 @@
 import { Button, Grid, TextField } from '@mui/material';
 import React from 'react';
 import { Control, Controller } from 'react-hook-form';
+import { VideoType } from '../../../../domain/entities/Video';
 import { useVideosInsertStyles } from '../styles/VideoInsert.style';
-
-export interface IFormInput {
-    title: string;
-    author: string;
-    url: string;
-    slug: string;
-    isPublic: boolean;
-}
 
 export interface VideoInserFormProps {
     handleSubmit: Function;
     onSubmit: Function;
-    control: Control<IFormInput, any>;
+    control: Control<VideoType, any>;
 }
 
 export const VideoInsertForm = ({ handleSubmit, onSubmit, control }: VideoInserFormProps) => {
